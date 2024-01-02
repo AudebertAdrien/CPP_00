@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 14:36:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/02 16:18:43 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/02 17:05:55 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	main(int argc, char **argv)
 {
 	if (argc > 1)
 	{
-		for (int i = 0; i < argc - 1; i++)
+		for (int i = 1; i < argc; i++)
 		{
 			for (int j = 0; argv[i][j]; j++)
 				std::cout << ft_toupper(argv[i][j]);
