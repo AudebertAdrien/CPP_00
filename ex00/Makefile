@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/01/02 15:22:28 by motoko           ###   ########.fr        #
+#    Updated: 2024/01/02 16:41:38 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,13 @@ VPATH			:= $(SRCS_DIR):
 SRCS			:= megaphone.cpp
 
 CC				:= g++
-CFLAGS`			:= -g -Wall -Werror -Wextra -std=c++98
+CFLAGS`			:= -g -Wall -Werror -Wextra 
+
+ifdef STD
+CFLAGS			+= -std=$(STD)
+else
+CFLAGS			+= -std=c++98
+endif
 
 RM				:= rm -rf
 
