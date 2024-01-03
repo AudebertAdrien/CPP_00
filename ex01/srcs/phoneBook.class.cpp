@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/02 20:44:38 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/03 14:34:05 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ PhoneBook::PhoneBook(void) {
 
 PhoneBook::PhoneBook(const int f) : _boo(f) {
 	std::cout << "Constructor 2 Phone Book!" << std::endl;
+	this->_boo = 55;
 }
 
 PhoneBook::~PhoneBook(void) {
 	std::cout << "Destructor Phone Book!" << std::endl;
 }
 
-void	PhoneBook::print_public(void) const {
-	std::cout << "My string public" << std::endl;
+void	PhoneBook::print_public(int i) const {
+	std::cout << "My string public" << i << std::endl;
 	_print_private();
 	return ;
 }

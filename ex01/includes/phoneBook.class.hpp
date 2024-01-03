@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/02 20:28:19 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/03 14:35:11 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PhoneBook {
 		PhoneBook(int i);
 		~PhoneBook(void);
 
-		void	print_public(void) const;
+		void	print_public(int i) const;
 
 	private :
 
