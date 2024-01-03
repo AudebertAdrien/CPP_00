@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   contact.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/02 14:36:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/03 15:17:27 by motoko           ###   ########.fr       */
+/*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
+/*   Updated: 2024/01/03 17:10:05 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
+
 #include "main.hpp"
 
-int	main(int argc, char **argv)
-{
-	PhoneBook phone_book;
-	return (0);
-}
+class Contact {
+
+	public :
+		
+		Contact(void);
+		Contact(Contact const & cpy);
+		//Contact & operator=(Contact const & cpy);
+		~Contact(void);
+
+	private :
+
+		string _frist_name;
+		string	_last_name;
+		string	_nick_name;
+		int		_phone_number;
+		string	_darkest_secret;
+};
+
+#endif

@@ -6,33 +6,27 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/03 14:34:05 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/03 17:28:11 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
 
 PhoneBook::PhoneBook(void) {
-	std::cout << "Constructor 1 Phone Book!" << std::endl;
-	this->foo = 43;
+	std::cout << "Constructor Phone Book!" << std::endl;
 }
 
-PhoneBook::PhoneBook(const int f) : _boo(f) {
-	std::cout << "Constructor 2 Phone Book!" << std::endl;
-	this->_boo = 55;
+PhoneBook::PhoneBook(PhoneBook const &cpy) {
+	std::cout << "Copy Constructor Phone Book!" << std::endl;
+	*this = cpy;
+	return ;
+}
+
+PhoneBook & PhoneBook::operator=(const PhoneBook &src) {
+	std::cout << "Assign Constructor Phone Book!" << std::endl;
+	return *this;
 }
 
 PhoneBook::~PhoneBook(void) {
 	std::cout << "Destructor Phone Book!" << std::endl;
-}
-
-void	PhoneBook::print_public(int i) const {
-	std::cout << "My string public" << i << std::endl;
-	_print_private();
-	return ;
-}
-
-void	PhoneBook::_print_private(void) const {
-	std::cout << "My string private : " << this->_boo << std::endl;
-	return ;
 }

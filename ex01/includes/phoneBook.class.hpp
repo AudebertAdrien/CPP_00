@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/03 14:35:11 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/03 17:23:04 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,19 +19,12 @@ class PhoneBook {
 
 	public :
 		
-		int	foo;
-
 		PhoneBook(void);
-		PhoneBook(int i);
+		PhoneBook(PhoneBook const &cpy);
+		PhoneBook & operator=(PhoneBook const &cpy);
 		~PhoneBook(void);
 
-		void	print_public(int i) const;
-
 	private :
-
-		int		_boo;
-		void	_print_private(void) const;
 };
 
 #endif
-
