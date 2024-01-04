@@ -6,11 +6,12 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/03 17:27:43 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/04 12:02:33 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.hpp"
+#include "contact.class.hpp"
 
 Contact::Contact(void) {
 	std::cout << "Constructor Contact!" << std::endl;
