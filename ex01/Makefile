@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/01/02 18:24:29 by motoko           ###   ########.fr        #
+#    Updated: 2024/01/04 13:56:08 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ VPATH			:= $(SRCS_DIR):
 
 SRCS			:= main.cpp				\
 				   phoneBook.class.cpp	\
+				   contact.class.cpp	\
 				   ft_toupper.cpp		\
 
 CC				:= g++

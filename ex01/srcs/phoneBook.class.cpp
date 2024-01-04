@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/04 13:31:43 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/04 13:52:09 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 PhoneBook::PhoneBook(void) {
 	std::cout << "Constructor Phone Book!" << std::endl;
-	this->_contact_list[8];
 }
 
 PhoneBook::PhoneBook(PhoneBook const &cpy) {
@@ -33,7 +32,8 @@ PhoneBook::~PhoneBook(void) {
 	std::cout << "Destructor Phone Book!" << std::endl;
 }
 
+/*
 Contact&	PhoneBook::getContactList()
 {
-	return this->_contact_list;
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/04 12:02:33 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/04 14:21:09 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 
 Contact::Contact(void) {
 	std::cout << "Constructor Contact!" << std::endl;
+}
+
+Contact::Contact(std::string first_name) : _first_name(first_name) {
+	std::cout << "Constructor Contact with Params!" << std::endl;
 }
 
 Contact::Contact(Contact const &cpy) {
@@ -29,4 +33,9 @@ Contact & Contact::operator=(const Contact &src) {
 
 Contact::~Contact(void) {
 	std::cout << "Destructor Contact!" << std::endl;
+}
+
+void	Contact::get_user_list() const
+{
+	std::cout << this->_first_name << std::endl;
 }

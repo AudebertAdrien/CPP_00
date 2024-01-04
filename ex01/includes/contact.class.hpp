@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/04 11:54:48 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/04 14:18:32 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,20 @@ class Contact {
 	public :
 		
 		Contact(void);
+		Contact(std::string first_name);
 		Contact(Contact const &cpy);
-		Contact& operator=(Contact const &cpy);
+		Contact & operator=(Contact const &cpy);
 		~Contact(void);
+
+		void get_user_list() const;
 
 	private :
 
-		//string _frist_name;
-		//string	_last_name;
-		//string	_nick_name;
-		//int		_phone_number;
-		//string	_darkest_secret;
+		std::string	_first_name;
+		std::string	_last_name;
+		std::string	_nick_name;
+		std::string	_darkest_secret;
+		int			_phone_number;
 };
 
 #endif
