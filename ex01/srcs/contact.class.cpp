@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/04 14:21:09 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/10 15:40:15 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,25 +17,35 @@ Contact::Contact(void) {
 	std::cout << "Constructor Contact!" << std::endl;
 }
 
-Contact::Contact(std::string first_name) : _first_name(first_name) {
+Contact::Contact(std::string first_name, std::string last_name, std::string nick_name, std::string darkest_secret, std::string phone_number) : _first_name(first_name), _last_name(last_name), _nick_name(nick_name), _darkest_secret(darkest_secret), _phone_number(phone_number) {
 	std::cout << "Constructor Contact with Params!" << std::endl;
-}
-
-Contact::Contact(Contact const &cpy) {
-	std::cout << "Copy Constructor Contact!" << std::endl;
-	*this = cpy;
-}
-
-Contact & Contact::operator=(const Contact &src) {
-	std::cout << "Assign Constructor Contact!" << std::endl;
-	return *this;
 }
 
 Contact::~Contact(void) {
 	std::cout << "Destructor Contact!" << std::endl;
 }
 
-void	Contact::get_user_list() const
+void	display_contact(std::string str)
 {
-	std::cout << this->_first_name << std::endl;
+	int	column_width = 10;
+	int	space_before = column_width - str.length();
+
+	if (space_before >= 0) 
+		std::cout << std::setw(column_width) << std::right << str;
+	else
+	{
+		str = str.substr(0, column_width - 1);
+		str += '.';
+		std::cout << std::right << str;
+	}
+	std::cout << "|";
+}
+
+void	Contact::get_user_infos(void) {
+	display_contact(_first_name);	
+	display_contact(_last_name);	
+	display_contact(_nick_name);	
+	display_contact(_darkest_secret);	
+	display_contact(_phone_number);	
+	std::cout << std::endl;
 }

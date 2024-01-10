@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/04 12:03:24 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/09 15:37:58 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 #include <iostream>
 #include <string>
+#include <iomanip>
+
+#define MAX_COL_SIZE 5
 
 char	ft_toupper(char ch);
 

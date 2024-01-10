@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 14:36:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/04 14:21:26 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/09 16:08:13 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,19 @@
 int	main(int argc, char **argv)
 {
 	PhoneBook	phone_book;
-	
-	std::string test;
-	std::cin >> test;
+	std::string str;
 
-	Contact		n1(test);	
-	n1.get_user_list();
+	while (1)
+	{
+		std::cout << "INPUT USER : " << std::endl;
+		std::getline(std::cin, str);
+
+		if (str == "ADD")
+			phone_book.create_contact();
+		if (str == "SEARCH")
+			phone_book.get_contact_list();
+		if (str == "EXIT")
+			break ;
+	}
 	return (0);
 }
