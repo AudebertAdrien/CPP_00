@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/10 15:40:53 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/10 17:27:28 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,29 +30,36 @@ void	PhoneBook::create_contact(void)
 	std::string nick_name;
 	std::string darkest_secret;
 	std::string	phone_number;	
+	int			len;
 
 	std::cout << "first name : " << std::endl;
 	std::getline(std::cin, first_name);
-
 	std::cout << "last name : " << std::endl;
 	std::getline(std::cin, last_name);
-
 	std::cout << "nick name : " << std::endl;
 	std::getline(std::cin, nick_name);
-
 	std::cout << "darkest secret : " << std::endl;
 	std::getline(std::cin, darkest_secret);
-
 	std::cout << "phone number : " << std::endl;
 	std::getline(std::cin, phone_number);
-
-	_contact_list[_i] = Contact(first_name, last_name, nick_name, darkest_secret, phone_number);
-
+	for (int i = 0; i < _contact_list[i].is_initialized(); i++)
+		len++;
+	if (len == 8)
+		_contact_list[7] = Contact(first_name, last_name, nick_name, darkest_secret, phone_number);
+	else
+		_contact_list[_i] = Contact(first_name, last_name, nick_name, darkest_secret, phone_number);
 	_i++;
 }
 
+
 void	PhoneBook::get_contact_list(void)
 {
-	for (int i = 0; i < 8; i++)
+	int	i;
+
+	std::cout << "PICK AND INDEX BETWEEN 0 and 7" << std::endl;
+	std::cin >> i;
+	std::cin.ignore();
+	if (_contact_list[i].is_initialized())
 		_contact_list[i].get_user_infos();
+	std::cout << "NOT INITIALIZED !!!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/10 15:47:35 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/10 16:30:56 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Contact {
 		~Contact(void);
 
 		void	get_user_infos(void);
+		bool	is_initialized(void) const;
 
 	private :
 
@@ -32,9 +33,9 @@ class Contact {
 		std::string	_last_name;
 		std::string	_nick_name;
 		std::string	_darkest_secret;
-		std::string	_phone_number;
+		std::string	_phone_number;	
 
-
+		bool		_initialized;
 };
 
 #endif
