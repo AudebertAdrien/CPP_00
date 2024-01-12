@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/01/11 16:39:10 by motoko           ###   ########.fr        #
+#    Updated: 2024/01/12 16:26:02 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ INCLUDES_DIR	:= includes
 
 VPATH			:= $(SRCS_DIR):
 
-SRCS			:= main.cpp				\
+SRCS			:= tests.cpp				\
 				   Account.cpp			
 
 CC				:= g++
