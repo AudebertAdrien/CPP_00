@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/10 17:30:13 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/13 17:39:38 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 class PhoneBook {
 
 	public :
-		
-		PhoneBook(void);
+
 		PhoneBook(void);
 		~PhoneBook(void);
 

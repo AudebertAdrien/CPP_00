@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/10 16:30:28 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/13 17:58:32 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 Contact::Contact(void) {
 	std::cout << "Constructor Contact!" << std::endl;
  	_initialized = false;
-
 }
 
 Contact::Contact(std::string first_name, std::string last_name, std::string nick_name, std::string darkest_secret, std::string phone_number) : _first_name(first_name), _last_name(last_name), _nick_name(nick_name), _darkest_secret(darkest_secret), _phone_number(phone_number) {

@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/10 17:27:28 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/13 18:40:49 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,15 +51,21 @@ void	PhoneBook::create_contact(void)
 	_i++;
 }
 
-
 void	PhoneBook::get_contact_list(void)
 {
 	int	i;
 
-	std::cout << "PICK AND INDEX BETWEEN 0 and 7" << std::endl;
-	std::cin >> i;
-	std::cin.ignore();
-	if (_contact_list[i].is_initialized())
+	do {
+		std::cout << "PICK AND INDEX BETWEEN 0 and 7: ";
+		std::cin >> i; 
+		std::cout << std::endl;
+		std::cin.ignore();
+	} while (!(i >= 0 && i <= 7));
+ 	if (_contact_list[i].is_initialized())
+	{
 		_contact_list[i].get_user_infos();
-	std::cout << "NOT INITIALIZED !!!" << std::endl;
+		std::cout << std::endl;
+	}
+	else
+		std::cout << i << " is not initialized" << std::endl;
 }
