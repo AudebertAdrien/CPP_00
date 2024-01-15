@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 17:34:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/13 17:39:38 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/14 16:27:42 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class PhoneBook {
 
 	private :
 
-		Contact		_contact_list[8];
+		Contact		_contact_list[3];
 		int			_i;
 };
 
