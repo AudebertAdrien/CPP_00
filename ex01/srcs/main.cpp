@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 14:36:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/15 14:38:39 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/15 16:22:29 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ int	main(int argc, char **argv)
 		std::getline(std::cin, str);
 		if (std::cin.eof())
 			exit(0);
-
 		if (str == "ADD")
 			phone_book.create_contact();
 		if (str == "SEARCH")

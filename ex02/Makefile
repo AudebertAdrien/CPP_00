@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/01/13 16:48:43 by motoko           ###   ########.fr        #
+#    Updated: 2024/01/15 16:24:55 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,10 +37,10 @@ OBJS			:= $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))
 all:	$(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) -I$(INCLUDES_DIR) $(OBJS) -o $@	
+	$(CC) $(CFLAGS) -I$(INCLUDES_DIR) $(OBJS) -o $@	
 
 $(OBJS_DIR)/%.o: %.cpp | $(OBJS_DIR)
-	$(CC) $(FLAGS) -I$(INCLUDES_DIR) -c $< -o $@
+	$(CC) $(CFLAGS) -I$(INCLUDES_DIR) -c $< -o $@
 
 $(OBJS_DIR):
 	mkdir -p $(OBJS_DIR)

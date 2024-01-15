@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 14:36:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/02 17:05:55 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/15 16:19:52 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ int	main(int argc, char **argv)
 		{
 			for (int j = 0; argv[i][j]; j++)
 				std::cout << ft_toupper(argv[i][j]);
-			std::cout << std::endl;
 		}
+		std::cout << std::endl;
 	}
+	else
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
 	return (0);
 }
