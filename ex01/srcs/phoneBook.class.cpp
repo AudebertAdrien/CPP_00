@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/02 18:25:28 by motoko            #+#    #+#             */
-/*   Updated: 2024/01/14 19:19:26 by motoko           ###   ########.fr       */
+/*   Updated: 2024/01/15 14:50:08 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	PhoneBook::create_contact(void)
 	std::cout << "phone number : " << std::endl;
 	std::getline(std::cin, phone_number);
 
-	if (_i >= 2)
+	if (_i >= 8)
 		_i = 0;
 	_contact_list[_i] = Contact(first_name, last_name, nick_name, darkest_secret, phone_number);
 	_i++;
@@ -70,9 +70,11 @@ void	PhoneBook::get_contact_list(void)
 			i = -1;
 		std::cin.clear();
 		std::cin.ignore(MAX_BUFFER, '\n');
+		if (std::cin.eof())
+			exit(0);
 		std::cout << std::endl;
 	} while (!(i >= 0 && i <= 9));
-	
+
  	if (_contact_list[i].is_initialized())
 	{
 		_contact_list[i].get_user_infos();
